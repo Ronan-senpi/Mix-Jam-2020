@@ -49,6 +49,7 @@ public class SpaceShipDeplacement : MonoBehaviour
             position.y = -Camera.main.orthographicSize + reverseShipBoundaryRadius;
         }
 
+        // SCREEN RATIO
         float screenRatio = Screen.width / Screen.height;
         float widthOrthographicsSize = Camera.main.orthographicSize * screenRatio;
 
