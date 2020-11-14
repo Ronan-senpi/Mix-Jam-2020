@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4082607813202082523}
   - component: {fileID: 4082607813202082524}
-  - component: {fileID: 4082607813202082525}
   - component: {fileID: 253515861658692775}
+  - component: {fileID: -233540350681697330}
   m_Layer: 9
   m_Name: ProjectilGrab
   m_TagString: Untagged
@@ -83,20 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4082607813202082525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4082607813202082526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0b4b55835bd3c4469d1924786e99a56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  lifeTime: 1.5
 --- !u!61 &253515861658692775
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,3 +109,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-233540350681697330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4082607813202082526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b77317a86db3f9b4aa4fc67afc4e6d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  lifeTime: 1.5
+  projectilType: 0
+  grabForce: 10

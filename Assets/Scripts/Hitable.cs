@@ -7,6 +7,7 @@ public class Hitable : MonoBehaviour
 {
     [SerializeField]
     private LayerMask hitableMask;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if ((hitableMask.value & (1 << collision.gameObject.layer)) > 0)
@@ -17,7 +18,8 @@ public class Hitable : MonoBehaviour
                 switch (projectil.GetProjectilType())
                 {
                     case ProjectilType.Grab:
-                        Grab();
+                        ProjectilGrab pGrab = ((ProjectilGrab)projectil);
+                        Grab(pGrab.GetOrigin(), pGrab.GetGrabForce());
                         break;
                     case ProjectilType.Kill:
                         Kill();
@@ -31,12 +33,12 @@ public class Hitable : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    private void Grab()
+    private void Grab(Vector2 origin, float grabForce)
     {
         Rigidbody2D rb;
         if (transform.TryGetComponent(out rb))
         {
-            rb.AddForce(Vector2.one);
+            rb.AddForce(origin * grabForce);
         }
     }
 }

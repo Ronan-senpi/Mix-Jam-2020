@@ -10,13 +10,10 @@ public class Projectil : MonoBehaviour
     [SerializeField]
     float lifeTime;
     float lifepass = 0;
+
     [SerializeField]
     ProjectilType projectilType;
 
-    public ProjectilType GetProjectilType()
-    {
-        return projectilType;
-    }
 
     // Update is called once per frame
     void Update()
@@ -38,4 +35,9 @@ public class Projectil : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    public ProjectilType GetProjectilType()
+    {
+        return projectilType;
+    }
+
 }
