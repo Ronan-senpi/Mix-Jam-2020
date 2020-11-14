@@ -19,7 +19,7 @@ public class Hitable : MonoBehaviour
                 {
                     case ProjectilType.Grab:
                         ProjectilGrab pGrab = ((ProjectilGrab)projectil);
-                        Grab(pGrab.GetOrigin(), pGrab.GetGrabForce());
+                        Grab(pGrab.Origin, pGrab.GetGrabForce());
                         break;
                     case ProjectilType.Kill:
                         Kill();
@@ -38,7 +38,7 @@ public class Hitable : MonoBehaviour
         Rigidbody2D rb;
         if (transform.TryGetComponent(out rb))
         {
-            rb.AddForce(origin * grabForce);
+            rb.AddForce(origin-new Vector2(transform.position.x, transform.position.y) * grabForce);
         }
     }
 }
