@@ -26,14 +26,19 @@ public class ShootBase : MonoBehaviour
         cooddownPass += Time.deltaTime;
         if (Input.GetKey(keyKill) && cooddownPass > cooldown)
         {
-            Instantiate(projectileKillPrefab, transform.position, transform.rotation, transform);
+            Instantiate(projectileKillPrefab, transform.position, transform.parent.transform.rotation);
             cooddownPass = 0;
         }
 
 
         if (Input.GetKey(keyGrab) && cooddownPass > cooldown)
         {
-            Instantiate(projectileGrabPrefab, transform.position, transform.rotation, transform);
+            GameObject grab = Instantiate(projectileGrabPrefab, transform.position, transform.parent.transform.rotation);
+            ProjectilGrab pGrab;
+            if (grab.TryGetComponent(out pGrab))
+            {
+                pGrab.Origin = transform.position;
+            }
             cooddownPass = 0;
         }
     }

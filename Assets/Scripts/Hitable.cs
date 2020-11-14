@@ -19,7 +19,7 @@ public class Hitable : MonoBehaviour
                 {
                     case ProjectilType.Grab:
                         ProjectilGrab pGrab = ((ProjectilGrab)projectil);
-                        Grab(pGrab.GetOrigin(), pGrab.GetGrabForce());
+                        Grab(pGrab.Origin, pGrab.GetGrabForce());
                         break;
                     case ProjectilType.Kill:
                         Kill();

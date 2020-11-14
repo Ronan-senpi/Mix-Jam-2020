@@ -11,18 +11,23 @@ public class ProjectilGrab : Projectil
     Vector2 origin;
     private void Start()
     {
-        origin = transform.parent.transform.position;
+
     }
 
- 
-
-    public Vector2 GetOrigin()
+    public Vector2 Origin
     {
-        return origin;
+        get
+        {
+            return origin;
+        }
+        set
+        {
+            origin = value;
+        }
     }
-
     public float GetGrabForce()
     {
         return grabForce;
     }
+
 }

@@ -124,4 +124,7 @@ MonoBehaviour:
   speed: 10
   lifeTime: 1.5
   projectilType: 0
-  grabForce: 10
+  hitableMask:
+    serializedVersion: 2
+    m_Bits: 256
+  grabForce: 100
