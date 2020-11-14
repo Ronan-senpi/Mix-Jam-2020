@@ -38,7 +38,7 @@ public class Hitable : MonoBehaviour
         Rigidbody2D rb;
         if (transform.TryGetComponent(out rb))
         {
-            rb.AddForce(origin * grabForce);
+            rb.AddForce(origin-new Vector2(transform.position.x, transform.position.y) * grabForce);
         }
     }
 }

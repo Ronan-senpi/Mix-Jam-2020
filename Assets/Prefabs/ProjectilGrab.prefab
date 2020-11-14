@@ -127,4 +127,4 @@ MonoBehaviour:
   hitableMask:
     serializedVersion: 2
     m_Bits: 256
-  grabForce: 100
+  grabForce: 20
