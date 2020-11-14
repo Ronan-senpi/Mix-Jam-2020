@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.Utils
 {
-    public enum ProjectilType
+    public enum FoodStateEnum
     {
-        Grab,
-        Kill
+        Raw,
+        Cooked,
+        Burned,
     }
 }
