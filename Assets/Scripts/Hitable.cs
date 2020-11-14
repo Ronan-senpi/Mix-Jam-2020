@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts;
+using Assets.Scripts.Utils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,11 +30,11 @@ public class Hitable : MonoBehaviour
         }
     }
 
-    private void Kill()
+    protected virtual void Kill()
     {
         Destroy(gameObject);
     }
-    private void Grab(Vector2 origin, float grabForce)
+    protected virtual void Grab(Vector2 origin, float grabForce)
     {
         Rigidbody2D rb;
         if (transform.TryGetComponent(out rb))
