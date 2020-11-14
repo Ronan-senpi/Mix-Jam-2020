@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7569209950834501517}
   - component: {fileID: 7569209950834501514}
   - component: {fileID: 7569209950834501515}
+  - component: {fileID: -6529987251690315384}
   m_Layer: 0
   m_Name: Asteroide2
   m_TagString: Asteroid
@@ -150,3 +151,18 @@ MonoBehaviour:
   screenBottom: -2
   screenLeft: -9
   screenRight: 9
+--- !u!114 &-6529987251690315384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7569209950834501512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 384d4cad9ed6d5f4b9b78d3154a918c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitableMask:
+    serializedVersion: 2
+    m_Bits: 512
