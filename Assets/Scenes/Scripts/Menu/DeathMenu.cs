@@ -11,7 +11,6 @@ public class DeathMenu : MonoBehaviour
     void Start()
     {
         on = false;
-        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
