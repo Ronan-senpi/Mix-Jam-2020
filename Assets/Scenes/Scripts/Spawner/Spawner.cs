@@ -15,12 +15,12 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        if(timer <= 0)
+        if(timer <=0 && spawnPoint.Length >0 && gameObjectInstantiate.Length >0)
         {
             int randEnemy = Random.Range(0, gameObjectInstantiate.Length);
             int randSpawnPoint = Random.Range(0, spawnPoint.Length);
 
-            Instantiate(gameObjectInstantiate[0], spawnPoint[randSpawnPoint].position, transform.rotation);
+            Instantiate(gameObjectInstantiate[randEnemy], spawnPoint[randSpawnPoint].position, transform.rotation);
             timer = difficultTimer;
         }
         
