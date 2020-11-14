@@ -6,9 +6,10 @@ public class TakeFood : MonoBehaviour
 {
     [SerializeField]
     LayerMask hitMask;
-
-    List<GameObject> storageFood = new List<GameObject>();
-
+    private void Start()
+    {
+        
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if ((hitMask.value & (1 << collision.gameObject.layer)) > 0)
@@ -16,7 +17,7 @@ public class TakeFood : MonoBehaviour
             Food food;
             if (collision.transform.TryGetComponent(out food))
             {
-                this.storageFood.Add(collision.transform.gameObject);
+                FoodManager.Instance.AddFood(food);
                 Destroy(collision.transform.gameObject);
             }
         }

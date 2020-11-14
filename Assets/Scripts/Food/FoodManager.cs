@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class FoodManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    List<GameObject> storageFood;
+    public static FoodManager Instance { get; private set; }
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+            storageFood = new List<GameObject>();
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+    
+    public void AddFood(Food food)
+    {
+        if (food != null)
+        {
+            this.storageFood.Add(food.gameObject);
+        }
     }
 }
