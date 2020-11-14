@@ -143,8 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5332ce9cc78544081696a306925061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxThrust: 200
-  maxTorque: 100
+  maxThrust: 50
+  maxTorque: 50
   rb: {fileID: 0}
   screenTop: 10
   screenBottom: -2

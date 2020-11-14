@@ -5,7 +5,17 @@ using UnityEngine;
 public class PV : MonoBehaviour
 {
     public int pv = 3;
+    public bool isDead;
 
+    // DEATHMENU
+    public GameObject deathMenu;
+
+
+    private void Start()
+    {
+        deathMenu = GameObject.Find("DeathMenu");
+        isDead = false;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -23,10 +33,16 @@ public class PV : MonoBehaviour
             }
             else if(pv ==0)
             {
+                isDead = true;
                 Destroy(collision.gameObject);
+            }
+
+            if(isDead == true)
+            {
+                deathMenu.SetActive(true);
                 Destroy(this.gameObject);
             }
-          
+
         }
     }
 }

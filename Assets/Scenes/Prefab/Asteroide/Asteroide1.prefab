@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7946109015040173222}
   m_Layer: 0
   m_Name: Asteroide1
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -143,8 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5332ce9cc78544081696a306925061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxThrust: 1
-  maxTorque: 1
+  maxThrust: 50
+  maxTorque: 50
   rb: {fileID: 0}
   screenTop: 10
   screenBottom: -2
