@@ -45,7 +45,7 @@ public class MonsterDeplacement : MonoBehaviour
         }
         else if (targetFood)
         {
-            if(Vector2.Distance(transform.position,targetFood.position)< 5)
+            if(Vector2.Distance(transform.position,targetFood.position)< 10)
             {
                 transform.position = Vector2.MoveTowards(transform.position, targetFood.position, speed * Time.deltaTime);
                 Vector3 direction = targetFood.position - transform.position;

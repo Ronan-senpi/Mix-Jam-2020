@@ -10,10 +10,11 @@ public class PV : MonoBehaviour
     // DEATHMENU
     public GameObject deathMenu;
 
-
+    private AudioSource audio;
     private void Start()
     {
         isDead = false;
+        audio = this.GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()
@@ -27,6 +28,7 @@ public class PV : MonoBehaviour
         {
             if(pv > 0)
             {
+                audio.Play();
                 pv = pv - 1;
                 Destroy(collision.gameObject);
             }

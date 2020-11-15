@@ -6,9 +6,11 @@ public class TakeFood : MonoBehaviour
 {
     [SerializeField]
     LayerMask hitMask;
+
+    private AudioSource audio;
     private void Start()
     {
-        
+        audio = this.GetComponent<AudioSource>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -17,6 +19,7 @@ public class TakeFood : MonoBehaviour
             Food food;
             if (collision.transform.TryGetComponent(out food))
             {
+                audio.Play();
                 FoodManager.Instance.AddFood(food);
                 Destroy(collision.transform.gameObject);
             }
