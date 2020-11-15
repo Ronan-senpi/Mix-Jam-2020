@@ -35,7 +35,14 @@ public class SpaceShipDeplacement : MonoBehaviour
         // Move the Ship
         Vector3 position = transform.position;
         Vector3 velocity = new Vector3(0, Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime, 0);
-        position += rot * velocity;
+        if(Input.GetAxis("Vertical")<0)
+        {
+            return;
+        }
+        else
+        {
+            position += rot * velocity;
+        }
 
 
         // Restrict Player Camera

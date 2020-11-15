@@ -398,75 +398,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4569793146654638444}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1103474582
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7946109015040173218, guid: 5dfc8401c4736ad4ca0716c1c57b6557,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 383.3076
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946109015040173218, guid: 5dfc8401c4736ad4ca0716c1c57b6557,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 160.96895
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946109015040173218, guid: 5dfc8401c4736ad4ca0716c1c57b6557,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 557.2236
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946109015040173218, guid: 5dfc8401c4736ad4ca0716c1c57b6557,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946109015040173218, guid: 5dfc8401c4736ad4ca0716c1c57b6557,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946109015040173218, guid: 5dfc8401c4736ad4ca0716c1c57b6557,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946109015040173218, guid: 5dfc8401c4736ad4ca0716c1c57b6557,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946109015040173218, guid: 5dfc8401c4736ad4ca0716c1c57b6557,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946109015040173218, guid: 5dfc8401c4736ad4ca0716c1c57b6557,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946109015040173218, guid: 5dfc8401c4736ad4ca0716c1c57b6557,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946109015040173218, guid: 5dfc8401c4736ad4ca0716c1c57b6557,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946109015040173223, guid: 5dfc8401c4736ad4ca0716c1c57b6557,
-        type: 3}
-      propertyPath: m_Name
-      value: Asteroide1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5dfc8401c4736ad4ca0716c1c57b6557, type: 3}
 --- !u!1 &1184037628
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,7 +817,7 @@ PrefabInstance:
     - target: {fileID: 4717934475849895488, guid: f08527ae00e09c847aebb171f1fa81b3,
         type: 3}
       propertyPath: gameObjectInstantiate.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4717934475849895488, guid: f08527ae00e09c847aebb171f1fa81b3,
         type: 3}
@@ -949,6 +880,30 @@ PrefabInstance:
       propertyPath: gameObjectInstantiate.Array.data[6]
       value: 
       objectReference: {fileID: 9142736665454994235, guid: ae6c653381327bd418316c4d72c99ffd,
+        type: 3}
+    - target: {fileID: 4717934475849895488, guid: f08527ae00e09c847aebb171f1fa81b3,
+        type: 3}
+      propertyPath: gameObjectInstantiate.Array.data[0]
+      value: 
+      objectReference: {fileID: 1640754562790793660, guid: 16b52b92d75594e4988a5bc0c5221dbd,
+        type: 3}
+    - target: {fileID: 4717934475849895488, guid: f08527ae00e09c847aebb171f1fa81b3,
+        type: 3}
+      propertyPath: gameObjectInstantiate.Array.data[1]
+      value: 
+      objectReference: {fileID: 6649299157636445616, guid: 16d65fd1ccfc15b47a257cb46b084c33,
+        type: 3}
+    - target: {fileID: 4717934475849895488, guid: f08527ae00e09c847aebb171f1fa81b3,
+        type: 3}
+      propertyPath: gameObjectInstantiate.Array.data[2]
+      value: 
+      objectReference: {fileID: 1640754562790793660, guid: 16b52b92d75594e4988a5bc0c5221dbd,
+        type: 3}
+    - target: {fileID: 4717934475849895488, guid: f08527ae00e09c847aebb171f1fa81b3,
+        type: 3}
+      propertyPath: gameObjectInstantiate.Array.data[10]
+      value: 
+      objectReference: {fileID: 6649299157636445616, guid: 16d65fd1ccfc15b47a257cb46b084c33,
         type: 3}
     - target: {fileID: 4717934475849895489, guid: f08527ae00e09c847aebb171f1fa81b3,
         type: 3}
