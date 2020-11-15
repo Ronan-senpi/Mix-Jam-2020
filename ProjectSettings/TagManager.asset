@@ -17,8 +17,8 @@ TagManager:
   - Hitable
   - Projectils
   - Player
-  - 
-  - 
+  - FoodStorageWall
+  - FoodStored
   - 
   - 
   - 

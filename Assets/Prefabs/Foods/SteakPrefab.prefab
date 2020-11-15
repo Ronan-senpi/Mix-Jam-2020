@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4687560485092045172}
   - component: {fileID: 4687560485092048520}
   m_Layer: 8
-  m_Name: Steak
+  m_Name: SteakPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   hitableMask:
     serializedVersion: 2
     m_Bits: 512
+  foodType: 0
   foodState:
   - foodStates: 0
     foodStatesSprite: {fileID: 21300000, guid: 485f9c999e50ded4e8f423517b4f9e19, type: 3}

@@ -1,10 +1,15 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Utils;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class FoodManager : MonoBehaviour
 {
-    List<GameObject> storageFood;
+    [SerializeField]
+    Transform foodStorage;
+
+    List<Food> storagedFood;
     public static FoodManager Instance { get; private set; }
 
     void Awake()
@@ -14,19 +19,27 @@ public class FoodManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
-            storageFood = new List<GameObject>();
+            storagedFood = new List<Food>();
         }
         else
         {
             Destroy(this);
         }
     }
-    
+
     public void AddFood(Food food)
     {
         if (food != null)
         {
-            this.storageFood.Add(food.gameObject);
+            this.storagedFood.Add(food);
         }
     }
+
+    public int GetNbFood(FoodStateEnum state, FoodType fType)
+    {
+        return storagedFood.Count(x => x.CurrentState.State == state
+                                       && x.FoodType == fType);
+    }
+
+
 }

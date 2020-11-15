@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8559732782275720089}
   - component: {fileID: 8559732782275720094}
   m_Layer: 8
-  m_Name: Patate
+  m_Name: PatatePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,6 +146,7 @@ MonoBehaviour:
   hitableMask:
     serializedVersion: 2
     m_Bits: 512
+  foodType: 1
   foodState:
   - foodStates: 0
     foodStatesSprite: {fileID: 21300000, guid: 09727723b5013c741b7fd347d1505c8c, type: 3}
