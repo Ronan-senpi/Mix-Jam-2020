@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6547184325782674744}
   - component: {fileID: 6547184325782674695}
   - component: {fileID: 6547184325782674694}
+  - component: {fileID: -7931233168296766829}
   m_Layer: 8
   m_Name: TomatePrefab
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6547184325782674691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.38, y: 9.71, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -154,3 +155,22 @@ MonoBehaviour:
     foodStatesSprite: {fileID: 21300000, guid: d041b43482d7d4d468446ab3e5419ea1, type: 3}
   - foodStates: 2
     foodStatesSprite: {fileID: 21300000, guid: 2c301e1419281354b9fbc0ca288e642b, type: 3}
+--- !u!114 &-7931233168296766829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6547184325782674691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5332ce9cc78544081696a306925061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxThrust: 80
+  maxTorque: 80
+  rb: {fileID: 0}
+  screenTop: 12
+  screenBottom: -1
+  screenLeft: -12
+  screenRight: 12

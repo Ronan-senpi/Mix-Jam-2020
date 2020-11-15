@@ -144,13 +144,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5332ce9cc78544081696a306925061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxThrust: 50
-  maxTorque: 50
+  maxThrust: 90
+  maxTorque: 90
   rb: {fileID: 0}
-  screenTop: 10
-  screenBottom: -2
-  screenLeft: -9
-  screenRight: 9
+  screenTop: 12
+  screenBottom: -1
+  screenLeft: -12
+  screenRight: 12
 --- !u!114 &-6529987251690315384
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,7 +21,13 @@ public class Spawner : MonoBehaviour
             int randSpawnPoint = Random.Range(0, spawnPoint.Length);
 
             Instantiate(gameObjectInstantiate[randEnemy], spawnPoint[randSpawnPoint].position, transform.rotation);
+            difficultTimer = difficultTimer - 0.05f;
             timer = difficultTimer;
+            if(difficultTimer <=0.5f)
+            {
+                difficultTimer = 0.5f;
+                timer = difficultTimer;
+            }
         }
         
     }

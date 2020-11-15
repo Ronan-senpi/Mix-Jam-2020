@@ -6,11 +6,16 @@ public class ButtonMenu : MonoBehaviour
 {
    public void PlayGame()
     {
-        SceneManager.LoadScene("Scene 1");
+        SceneManager.LoadScene("Scene1");
     }
 
     public void OnApplicationQuit()
     {
         Application.Quit();
+    }
+
+    public void CreditScene()
+    {
+        SceneManager.LoadScene("Credit");
     }
 }
