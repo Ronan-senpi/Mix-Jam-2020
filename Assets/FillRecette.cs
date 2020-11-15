@@ -37,25 +37,29 @@ public class FillRecette : MonoBehaviour, IDropHandler
     }
     internal void Fill(Recettte recettte)
     {
-        IsFree = false;
-        nbIngrediant = recettte.Ingredients.Length;
-        recetteTimer.ResetTimer();
-        MainImage.sprite = recettte.Sprite;
-
-        for (int i = 0; i < Ingrediant.Length; i++)
+        try
         {
-            if (i < recettte.Ingredients.Length)
-            {
-                Ingrediant[i].RawImage.texture = recettte.Ingredients[i].Sprite.texture;
-                Ingrediant[i].FoodState = recettte.Ingredients[i].FoodState;
-                Ingrediant[i].FoodType = recettte.Ingredients[i].FoodType;
+            IsFree = false;
+            nbIngrediant = recettte.Ingredients.Length;
+            recetteTimer.ResetTimer();
+            MainImage.sprite = recettte.Sprite;
 
-            }
-            else
+            for (int i = 0; i < Ingrediant.Length; i++)
             {
-                Ingrediant[i].RawImage.texture = empty;
+                if (i < recettte.Ingredients.Length)
+                {
+                    Ingrediant[i].RawImage.texture = recettte.Ingredients[i].Sprite.texture;
+                    Ingrediant[i].FoodState = recettte.Ingredients[i].FoodState;
+                    Ingrediant[i].FoodType = recettte.Ingredients[i].FoodType;
+
+                }
+                else
+                {
+                    Ingrediant[i].RawImage.texture = empty;
+                }
             }
         }
+        catch { }
     }
 
     public void OnDrop(PointerEventData eventData)

@@ -6,7 +6,7 @@ public class ButtonMenu : MonoBehaviour
 {
    public void PlayGame()
     {
-        SceneManager.LoadScene("Scene1");
+        SceneManager.LoadScene(1);
     }
 
     public void OnApplicationQuit()
@@ -16,6 +16,6 @@ public class ButtonMenu : MonoBehaviour
 
     public void CreditScene()
     {
-        SceneManager.LoadScene("Credit");
+        SceneManager.LoadScene(2);
     }
 }

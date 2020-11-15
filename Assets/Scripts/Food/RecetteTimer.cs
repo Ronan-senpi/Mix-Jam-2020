@@ -22,9 +22,10 @@ public class RecetteTimer : MonoBehaviour
         try
         {
             slider.maxValue = Random.Range(minTimer, maxTimer + 1);
+            slider.value = slider.maxValue;
+
         }
         catch { }
-        slider.value = slider.maxValue;
     }
     // Update is called once per frame
     void Update()
