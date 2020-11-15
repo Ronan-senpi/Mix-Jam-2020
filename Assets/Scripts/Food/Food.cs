@@ -8,9 +8,13 @@ using UnityEngine;
 public class Food : Hitable
 {
     [SerializeField]
+    FoodType foodType;
+    [SerializeField]
     protected FoodState[] foodState;
 
-    protected FoodState currentState;
+    public FoodType FoodType { get { return foodType; } }
+
+    public FoodState CurrentState { get; private set; }
     protected int nbHit = 0;
     protected SpriteRenderer sp;
     private void Start()
@@ -18,8 +22,8 @@ public class Food : Hitable
         if(!TryGetComponent(out sp))
             throw new Exception("SpriteRenderer is MISSING");
 
-        currentState = foodState[nbHit];
-        sp.sprite = currentState.FoodStatesSprite;
+        CurrentState = foodState[nbHit];
+        sp.sprite = CurrentState.FoodStatesSprite;
         
     }
     protected override void Kill()
@@ -27,8 +31,8 @@ public class Food : Hitable
         nbHit++;
         if (nbHit < foodState.Length)
         {
-            currentState = foodState[nbHit];
-            sp.sprite = currentState.FoodStatesSprite;
+            CurrentState = foodState[nbHit];
+            sp.sprite = CurrentState.FoodStatesSprite;
         }
         else
         {

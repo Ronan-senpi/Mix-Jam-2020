@@ -18,5 +18,13 @@ namespace Assets.Scripts.Utils
                 return foodStatesSprite;
             }
         }
+
+        public FoodStateEnum State
+        {
+            get
+            {
+                return foodStates;
+            }
+        }
     }
 }
