@@ -9,6 +9,13 @@ public class Hitable : MonoBehaviour
     [SerializeField]
     private LayerMask hitableMask;
 
+    private AudioSource audio;
+
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if ((hitableMask.value & (1 << collision.gameObject.layer)) > 0)
@@ -32,6 +39,8 @@ public class Hitable : MonoBehaviour
 
     protected virtual void Kill()
     {
+        audio.Play();
+        this.gameObject.SetActive(false);
         Destroy(gameObject);
     }
     protected virtual void Grab(Vector2 origin, float grabForce)

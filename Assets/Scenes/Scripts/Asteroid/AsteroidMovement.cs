@@ -9,6 +9,7 @@ public class AsteroidMovement : MonoBehaviour
     public float maxTorque;
     public Rigidbody2D rb;
 
+
     // Border Screen 
 
     public float screenTop;
