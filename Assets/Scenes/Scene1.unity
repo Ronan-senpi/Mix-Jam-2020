@@ -454,27 +454,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4717934474874550615}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2110609824 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7903293172621304627, guid: ef1080b9418e11948bc8a7c9402f7431,
+--- !u!114 &2110609830 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2110609830, guid: ef1080b9418e11948bc8a7c9402f7431,
     type: 3}
   m_PrefabInstance: {fileID: 7903293171681466424}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2110609830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110609824}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 830d32ff2dc15aa46a1d458e81003672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pv: 2
-  isDead: 0
-  deathMenu: {fileID: 1697364587}
 --- !u!1001 &1228508724656453493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -556,6 +547,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1507288538390477444, guid: 7253cfcb509dd2c4286b979d0ebff856,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507288538390477444, guid: 7253cfcb509dd2c4286b979d0ebff856,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507288538390477444, guid: 7253cfcb509dd2c4286b979d0ebff856,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507288538390477444, guid: 7253cfcb509dd2c4286b979d0ebff856,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1331
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507288538390477444, guid: 7253cfcb509dd2c4286b979d0ebff856,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370738345193232773, guid: 7253cfcb509dd2c4286b979d0ebff856,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4370738345621735403, guid: 7253cfcb509dd2c4286b979d0ebff856,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -665,6 +686,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DeathMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370738345621735407, guid: 7253cfcb509dd2c4286b979d0ebff856,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370738346511096886, guid: 7253cfcb509dd2c4286b979d0ebff856,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7253cfcb509dd2c4286b979d0ebff856, type: 3}
@@ -979,6 +1010,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2110609830, guid: ef1080b9418e11948bc8a7c9402f7431, type: 3}
+      propertyPath: deathMenu
+      value: 
+      objectReference: {fileID: 1697364587}
     - target: {fileID: 7903293172621304627, guid: ef1080b9418e11948bc8a7c9402f7431,
         type: 3}
       propertyPath: m_Name
@@ -1038,26 +1073,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903293172621304630, guid: ef1080b9418e11948bc8a7c9402f7431,
-        type: 3}
-      propertyPath: borderLeftRight
-      value: -5.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903293172621304630, guid: ef1080b9418e11948bc8a7c9402f7431,
-        type: 3}
-      propertyPath: shipBoundaryRadius
-      value: -5.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903293172621304630, guid: ef1080b9418e11948bc8a7c9402f7431,
-        type: 3}
-      propertyPath: reverseShipBoundaryRadius
-      value: 5.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903293172621304631, guid: ef1080b9418e11948bc8a7c9402f7431,
-        type: 3}
-      propertyPath: m_Mass
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef1080b9418e11948bc8a7c9402f7431, type: 3}
