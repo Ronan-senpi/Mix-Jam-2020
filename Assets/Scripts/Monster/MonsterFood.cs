@@ -6,11 +6,14 @@ public class MonsterFood : MonoBehaviour
 {
     public MonsterDeplacement monsterState;
     public int monsterIntState;
+
+    private AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
         monsterState =this.gameObject.GetComponent<MonsterDeplacement>();
         monsterIntState = monsterState.state;
+        audio = this.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,6 +26,7 @@ public class MonsterFood : MonoBehaviour
     {
         if(collision.gameObject.tag =="Food")
         {
+            audio.Play();
             monsterIntState = monsterIntState + 1;
             monsterState.state = monsterIntState;
             Destroy(collision.gameObject);
