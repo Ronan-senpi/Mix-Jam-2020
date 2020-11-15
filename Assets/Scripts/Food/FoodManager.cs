@@ -47,7 +47,7 @@ public class FoodManager : MonoBehaviour
 
         fillRecette.Fill(recette[Random.Range(0, recette.Length)]);
 
-        
+
     }
 
     public void AddFood(Food food)
@@ -66,12 +66,10 @@ public class FoodManager : MonoBehaviour
 
     public void Remove(FoodStateEnum state, FoodType fType)
     {
-        Food f = storagedFood.FirstOrDefault(x => x.CurrentState.State == state
-                                       && x.FoodType == fType);
-        var tmp = storagedFood.Count(x => x.CurrentState.State == state
-                                       && x.FoodType == fType);
-        if (f != null)
-            storagedFood.Remove(f);
+        var f = storagedFood.Where(x => x.CurrentState.State == state && x.FoodType == fType).ToList();
+        var tmp = storagedFood.Count(x => x.CurrentState.State == state && x.FoodType == fType);
+
+        storagedFood.RemoveAll(x => x.CurrentState.State == state && x.FoodType == fType);
     }
 
 }
